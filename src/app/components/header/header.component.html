@@ -20,5 +20,6 @@
 
   <div *ngIf="show" class="border-gray-400 p-6 m-4 fixed right-0 bg-gray-100 rounded-lg shadow-lg flex flex-col">
     <p class="text-sm font-medium md-1">{{name}}</p>
-    <button class="text-sm font-medium mt-1 hover:text-green-200" (click)="auth.logout({ returnTo: 'https://www.google.com' })">Log out</button>
+    <!-- <button class="text-sm font-medium mt-1 hover:text-green-200" (click)="auth.logout({ returnTo: 'http://localhost:4200' })">Log out</button> -->
+    <button class="text-sm font-medium mt-1 hover:text-green-200" (click)="auth.logout({ returnTo: 'https://muzixapp.netlify.app/' })">Log out</button>
   </div>

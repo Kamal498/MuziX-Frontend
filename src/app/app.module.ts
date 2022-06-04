@@ -69,8 +69,8 @@ import { FavcardComponent } from './favcard/favcard.component';
       { path: 'dashboard/favorites', component: FavoritesContainerComponent , canActivate: [AuthGuard] }
     ]),
     AuthModule.forRoot({
-      domain: 'dev-3qx9j9qj.us.auth0.com',
-      clientId: '0b09YEZyX6r8JxdtvZw7Nx3BiHZYcPM0'
+      domain: 'dev-m592jp-u.us.auth0.com',
+      clientId: 'iPUw2YGwTCm7tuuPdFgezvAhqXECH7Ue'
     }),
   ],
   providers: [HttpClient],
