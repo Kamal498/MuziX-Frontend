@@ -21,12 +21,13 @@ export class FavouritesService {
 
   //url for production env on cloud
   prod_url = 'http://muzixappbackend-env.eba-rwbwqu9m.us-east-1.elasticbeanstalk.com'
+  prod_url2 = 'https://muzix-backend.herokuapp.com'
   
   //url for development env on local
   dev_url = 'http://localhost:5000'
   
   fetchFavourites(id){
-    return this.http.get(this.prod_url + '/get/' + id).subscribe(res => {
+    return this.http.get(this.prod_url2 + '/get/' + id).subscribe(res => {
       this.favorites=res;
       this.favoriteSubject.next(this.favorites);
     },
@@ -41,7 +42,7 @@ export class FavouritesService {
   }
 
   postFavourites(fav){
-    return this.http.post(this.prod_url + '/add', fav)
+    return this.http.post(this.prod_url2 + '/add', fav)
     .pipe(tap(
       (res) => {
         let flag =false;
@@ -68,6 +69,6 @@ export class FavouritesService {
   }
 
   checkFavourites(albumId, userId){
-    return this.http.get(this.prod_url + '/check?albumId=' + albumId + '&userId=' + userId).pipe(map(data => data));
+    return this.http.get(this.prod_url2 + '/check?albumId=' + albumId + '&userId=' + userId).pipe(map(data => data));
   }
 }
