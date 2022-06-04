@@ -22,7 +22,6 @@ export class GetArtistContainerComponent implements OnInit {
     this._spotifyService.getSeveralArtists().subscribe((res) => {
       this.artist=res;
     },(err) =>{
-      console.log(err);
     }
     );
     //this.getTopTracks();
@@ -31,7 +30,6 @@ export class GetArtistContainerComponent implements OnInit {
   // getArtist() {
   //   this._spotifyService.getArtistById(this.artistId).subscribe((data: any) => {
   //     this.artist = data;
-  //     console.log(data);
   //     this.preloading = false;
   //   });
   // }
@@ -39,7 +37,6 @@ export class GetArtistContainerComponent implements OnInit {
   // getTopTracks() {
   //   this._spotifyService.getTopTracks(this.artistId).subscribe((data: any) => {
   //     // this.artist=data;
-  //     console.log(data);
   //     this.topTracks = data;
   //   });
   // }

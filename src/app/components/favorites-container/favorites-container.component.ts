@@ -3,6 +3,7 @@ import { AuthService } from '@auth0/auth0-angular';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SpotifyService } from 'src/app/services/spotify.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-favorites-container',
@@ -30,19 +31,16 @@ export class FavoritesContainerComponent implements OnInit {
       this.userId=res.email;
       this.fav.getFavorites().subscribe(res=>{
         this.artist=res;
-        console.log(this.artist);
+        // console.log(this.artist);
       });
-    })
-  }
+      //this._spotifyService.refreshtoken();
+    })}
+
 
   // displayFavorites(){
   //   return this.fav.fetchFavourites(this.userId).subscribe(res=>{
   //     this.artists=res;
-  //     console.log(this.artists);
   //   });
   // }
 
-
-
-
-}
+  }

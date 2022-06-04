@@ -26,7 +26,7 @@ export class RecommendContainerComponent implements OnInit {
         this.message = 'No results found';
       }
     },(err) =>{
-      console.log(err);
+      // console.log(err);
     }
     );
   }

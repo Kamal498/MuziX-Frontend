@@ -53,18 +53,17 @@ export class FavcardComponent implements OnInit {
   alterFav(){
     this.fav.checkFavourites(this.item.albumId, this.userId).subscribe(resp => {
       this.isLiked = !resp;
-      console.log(resp);
+      
     })
     let newOb = {
       "albumId": this.item.albumId,
       "name": this.item.name,
       "image": this.item.image,
       "userId": this.userId,
-      // "artists": this.item.artists
+      //"artists": this.item.artists
     }
-    console.log(newOb);
     this.fav.postFavourites(newOb).subscribe(res => {
-      console.log(res);
+      
     });
   }
 

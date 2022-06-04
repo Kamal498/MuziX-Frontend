@@ -27,11 +27,9 @@ export class PlayerComponent implements OnInit {
       if(params.type=='artist'){
         this.spotify.getArtistById(params.id).subscribe((res) => {
           this.info = res;
-          console.log(this.info);
         });
         this.spotify.getTopTracks(params.id).subscribe((res) => {
           this.tracks = res;
-          console.log(this.tracks);
         })
       }
     });

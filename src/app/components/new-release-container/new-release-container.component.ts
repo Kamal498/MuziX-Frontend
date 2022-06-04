@@ -26,7 +26,6 @@ export class NewReleaseContainerComponent implements OnInit {
         this.preloading = false;
         this.error = true;
         this.message = error.error.error.message;
-        console.log(error.error.error.message);
       }
     );
   }
